@@ -35,6 +35,10 @@ def callback():
     return 'OK'
 
 
+@app.route(‘/’)
+def index(): 
+    return ‘Hello World’
+
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     line_bot_api.reply_message(
